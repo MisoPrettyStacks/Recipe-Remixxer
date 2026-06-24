@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#173f20" />
+  <title>The Recipe Remixr</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand-mark" aria-hidden="true">
+        <span class="leaf left"></span>
+        <span class="fork">♆</span>
+        <span class="leaf right"></span>
+      </div>
+      <div>
+        <h1>The Recipe Remixr</h1>
+        <p>Turn leftovers into amazing meals.</p>
+      </div>
+      <button class="icon-btn" id="settingsBtn" title="Settings" aria-label="Settings">⚙</button>
+    </header>
+
+    <main>
+      <section class="card input-card">
+        <div class="section-title">
+          <span class="section-icon">▣</span>
+          <div>
+            <h2>What’s in your fridge?</h2>
+            <p>Add the leftovers or ingredients you have.</p>
+          </div>
+        </div>
+
+        <label class="sr-only" for="ingredients">Ingredients</label>
+        <textarea id="ingredients" maxlength="240" placeholder="e.g., cooked rice, grilled chicken, broccoli, carrots, sour cream"></textarea>
+        <div class="counter"><span id="charCount">0</span>/240</div>
+
+        <div class="button-row">
+          <button class="secondary" id="randomizeBtn">⚂ Randomize</button>
+          <button class="primary" id="findBtn">✦ Find Recipe</button>
+        </div>
+      </section>
+
+      <section class="stats-grid" aria-label="Waste reduction stats">
+        <div class="mini-card"><strong id="matchCount">0</strong><span>Matches</span></div>
+        <div class="mini-card"><strong id="wasteScore">0%</strong><span>Waste Saved</span></div>
+        <div class="mini-card"><strong id="avgTime">—</strong><span>Avg Time</span></div>
+      </section>
+
+      <section class="ideas-section">
+        <div class="section-title simple">
+          <span class="spark">✣</span>
+          <div>
+            <h2>AI Recipe Ideas</h2>
+            <p>Recipes that minimize food waste and maximize flavor.</p>
+          </div>
+        </div>
+        <div id="results" class="recipe-list"></div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Main navigation">
+      <button class="nav-item active" data-view="home">⌂<span>Home</span></button>
+      <button class="nav-item" data-view="saved">♡<span>Saved</span></button>
+      <button class="nav-item" data-view="history">◷<span>History</span></button>
+      <button class="nav-item" data-view="favorites">♥<span>Favorites</span></button>
+    </nav>
+  </div>
+
+  <dialog id="recipeDialog">
+    <article class="dialog-card">
+      <button class="close-btn" id="closeDialog" aria-label="Close">×</button>
+      <img id="dialogImage" alt="" />
+      <div class="dialog-body">
+        <h2 id="dialogTitle"></h2>
+        <p id="dialogDescription"></p>
+        <div id="dialogTags" class="tags"></div>
+        <h3>Use these ingredients</h3>
+        <ul id="dialogIngredients"></ul>
+        <h3>Steps</h3>
+        <ol id="dialogSteps"></ol>
+        <button class="primary full" id="saveRecipeBtn">♡ Save Recipe</button>
+      </div>
+    </article>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>

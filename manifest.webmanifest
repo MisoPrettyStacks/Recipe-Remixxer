@@ -1,0 +1,9 @@
+{
+  "name": "The Recipe Remixr",
+  "short_name": "Recipe Remixr",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f7f8f5",
+  "theme_color": "#173f20",
+  "description": "Turn random leftovers into recipe ideas that reduce food waste."
+}
