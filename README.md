@@ -1,5 +1,10 @@
 # The Recipe Remixr
 
+<img width="567" height="747" alt="AA" src="https://github.com/user-attachments/assets/f35d331f-0013-429c-bb23-4bc958608018" />
+
+
+https://misoprettystacks.github.io/Recipe-Remixxer/
+
 A static GitHub Pages app that lets you type random leftovers from your fridge and generates recipe ideas that minimize food waste.
 
 ## Files
